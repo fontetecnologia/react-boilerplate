@@ -1,2 +1,3 @@
 # react-boilerplate
-React Boilerplate
+
+Um boilerplate para aplicações React
