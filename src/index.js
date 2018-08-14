@@ -17,7 +17,7 @@ const routerResolve = location => {
     .resolve(location)
     .then(render)
     .catch(() => {
-      /* TODO: tratar erro */
+      // TODO: tratar erro
     });
 };
 

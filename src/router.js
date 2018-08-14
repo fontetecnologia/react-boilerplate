@@ -1,12 +1,20 @@
+import React from 'react';
 import UniversalRouter from 'universal-router';
 import generateUrls from 'universal-router/generateUrls';
 
 import routes from './routes';
 
 const resolveRoute = (context, params) => {
-  if (typeof context.route.action === 'function') {
-    const result = context.route.action(context, params);
-    return { result, context };
+  const { route } = context;
+
+  if (typeof route.action === 'function') {
+    const pages = route
+      .action(context, params)
+      .map(x => x.then(x => x.default));
+
+    return Promise.all(pages).then(pages => {
+      return { result: route.render(pages), context };
+    });
   }
   return undefined;
 };

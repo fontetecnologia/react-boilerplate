@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { hot } from 'react-hot-loader';
 
 import HistoryContext from '../../contexts/HistoryContext';
 import RouterContext from '../../contexts/RouterContext';
@@ -51,7 +52,9 @@ class Wrapper extends Component {
 
   render() {
     const { history, router } = this.props;
-    const { router: result } = this.props;
+    const {
+      router: { result },
+    } = this.props;
 
     return (
       <HistoryContext.Provider value={history}>
@@ -63,4 +66,4 @@ class Wrapper extends Component {
   }
 }
 
-export default Wrapper;
+export default hot(module)(Wrapper);

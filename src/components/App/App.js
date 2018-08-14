@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     const { children } = this.props;
 
-    return <div>{children}</div>;
+    return React.Children.only(children);
   }
 }
 
