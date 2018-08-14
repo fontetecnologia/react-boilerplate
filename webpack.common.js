@@ -3,10 +3,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve('dist'),
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   module: {
     rules: [

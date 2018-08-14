@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "test": "mocha --require setupTests.js src/**/*.spec.js --reporter nyan",
+    "test": "mocha --require setupTests.js src/**/*.spec.js",
     "test:tdd": "mocha --require setupTests.js src/**/*.spec.js --watch --reporter nyan",
     "test:coverage": "nyc npm test",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
@@ -21,6 +21,7 @@
     ]
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
@@ -33,6 +34,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "7.2.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
