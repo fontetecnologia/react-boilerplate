@@ -1,4 +1,3 @@
-import React from 'react';
 import UniversalRouter from 'universal-router';
 import generateUrls from 'universal-router/generateUrls';
 
