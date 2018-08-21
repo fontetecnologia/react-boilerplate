@@ -19,3 +19,8 @@ yarn install
 - [ ] Criar scripts para gerar template de _route_ e _component_
 - [ ] Adicionar algumas imagens e ícones como exemplo
 - [ ] Service Workers
+
+## Agradecimentos
+
+- [React Starter Kit for Firebase](https://github.com/kriasoft/react-firebase-starter)
+- [Create React App](https://github.com/facebook/create-react-app)
